@@ -1,0 +1,268 @@
+@import "../../../assets/scss/variable.scss";
+.sidebar {
+  width: 260px;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+  background-color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transition: all 0.3s;
+  .logo {
+    margin: 18px 30px 18px;
+  }
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 30px 15px;
+    flex-grow: 1;
+    &.middle-list {
+      padding-bottom: 8px;
+      overflow: auto;
+    }
+    &.bottom-list {
+      padding-top: 0;
+      flex-grow: unset;
+    }
+    .nav-item {
+      position: relative;
+      &.profile {
+        ::ng-deep.mat-mdc-button-base {
+          height: auto;
+          background-color: $light-600;
+          border-radius: 6px;
+          width: 100%;
+          padding: 10px 15px;
+          justify-content: start;
+          .mdc-button__label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            .content-block {
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+            }
+            .user-name {
+              font-weight: 500;
+              color: $textDarkGrey1;
+            }
+            .role {
+              font-size: 10px;
+              line-height: 14px;
+              color: $textDarkGrey;
+            }
+          }
+        }
+      }
+      &.has-submenu {
+        .nav-link {
+          background-image: url("../../../assets/images/chevron-right-default-icon.svg");
+          background-position: center right 8px;
+          background-repeat: no-repeat;
+          background-size: 20px;
+          &.active {
+            background-image: url("../../../assets/images/chevron-right-white-icon.svg");
+          }
+        }
+        .sub-menu {
+          display: none;
+          flex-direction: column;
+          gap: 6px;
+          padding: 10px 0;
+          border-radius: 4px;
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+          position: absolute;
+          right: 0;
+          top: 100%;
+          z-index: 1;
+          background-color: $white;
+          width: 200px;
+          transition: all 0.3s;
+          .list-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            height: 44px;
+            padding: 8px 14px;
+            font-size: 15px;
+            line-height: 20px;
+            color: $textDarkGrey1;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            > * {
+              position: relative;
+              z-index: 1;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              bottom: 0;
+              width: 0;
+              transition: all 0.3s;
+              background-color: $primary-950;
+            }
+            &:hover,
+            &:focus {
+              color: $primary;
+              &::before {
+                width: 100%;
+              }
+            }
+          }
+        }
+        &:hover {
+          .sub-menu {
+            display: flex;
+          }
+        }
+      }
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 15px;
+      border-radius: 6px;
+      font-size: 16px;
+      line-height: 20px;
+      color: $textDarkGrey1;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        transition: all 0.3s;
+        background-color: $primary-950;
+        z-index: -1;
+      }
+      &:not(.active):hover,
+      &:not(.active):focus {
+        color: $primary;
+        &::before {
+          width: 100%;
+        }
+      }
+      .icon-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        width: 20px;
+        img {
+          transition: all 0.3s;
+        }
+      }
+      .active-icon {
+        margin-left: -20px;
+        transform: scale(0);
+        opacity: 0;
+      }
+      &.active {
+        background-color: $primary;
+        color: $white-100;
+        .default-icon {
+          transform: scale(0);
+          opacity: 0;
+        }
+        .active-icon {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+    ::ng-deep.nav-btn-link {
+      width: 100%;
+      justify-content: flex-start;
+      height: auto;
+      padding: 12px 15px;
+      .mdc-button__label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+      }
+      .icon-block {
+        height: 20px;
+        width: 20px;
+        display: flex;
+        align-items: center;
+        .active-icon {
+          margin-left: -20px;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba($color: $black, $alpha: 0.7);
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: all 0.3s;
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+  .sidebar {
+    left: -260px;
+    .nav-list {
+      &.middle-list {
+        padding-top: 8px;
+      }
+      &.bottom-list {
+        padding-bottom: 16px;
+      }
+      .nav-item.has-submenu {
+        .sub-menu {
+          width: calc(100% - 4px);
+          margin-top: 8px;
+          position: static;
+          box-shadow: none;
+          padding: 0;
+          padding-left: 33px;
+          .list-link {
+            border-radius: 6px;
+            height: 40px;
+            gap: 10px;
+          }
+        }
+        &:hover {
+          .sub-menu {
+            display: none;
+          }
+        }
+        &.open {
+          .nav-link {
+            background-image: url("../../../assets/images/chevron-down-white-icon.svg");
+          }
+          .sub-menu {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+  .sidebar-overlay {
+    display: block;
+  }
+}

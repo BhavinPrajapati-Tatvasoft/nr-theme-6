@@ -1,0 +1,17 @@
+@import "../../../assets/scss/variable.scss";
+.footer-text {
+  padding-bottom: 30px;
+  text-align: right;
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+  .footer-text {
+    padding-bottom: 24px;
+  }
+}
+@media (max-width: 575px) {
+  .footer-text {
+    padding-bottom: 16px;
+  }
+}

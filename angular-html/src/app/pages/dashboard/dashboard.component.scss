@@ -1,0 +1,396 @@
+@import "../../../assets/scss/variable.scss";
+.statistic-outer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 30px 41px;
+  padding: 30px 20px;
+  &:first-child,
+  &:last-child {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .statistic-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+    position: relative;
+    &:not(:first-child) {
+      &::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: $white-200;
+      }
+    }
+    .content-block {
+      .label {
+        padding-bottom: 6px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $textDark;
+      }
+      .numbers {
+        font-size: 28px;
+        line-height: 36px;
+        color: $textDark;
+        font-weight: 600;
+        min-width: 112px;
+        padding-bottom: 0;
+      }
+    }
+    .icon-block {
+      height: 60px;
+      width: 60px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.yellow {
+        background-color: $yellow-950;
+      }
+      &.blue {
+        background-color: $blue-950;
+      }
+      &.green {
+        background-color: $green-950;
+      }
+      &.purple {
+        background-color: $purple-950;
+      }
+    }
+  }
+}
+.chart-outer {
+  max-width: 296px;
+  width: 100%;
+  margin: 0 auto 44px;
+}
+.sales-card {
+  height: calc(100% - 30px);
+  .mdc-icon-button {
+    margin: -8px;
+  }
+  .mat-mdc-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+.products-outer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 485px;
+  width: 100%;
+  margin: 0 auto;
+  .product-block {
+    text-align: center;
+    .number {
+      font-size: 26px;
+      line-height: 28px;
+      font-weight: 500;
+      color: $textDark;
+      padding-bottom: 4px;
+    }
+    .product-name {
+      font-size: 14px;
+      line-height: 18px;
+      color: $textDarkGrey;
+      padding-bottom: 0;
+    }
+  }
+}
+.users-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 30px;
+  .number {
+    padding-bottom: 0;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $textDark;
+  }
+  .label {
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 0;
+    text-transform: capitalize;
+  }
+  .expected-user {
+    text-align: right;
+  }
+}
+.progress-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 15px;
+  p {
+    padding-bottom: 0;
+  }
+  .success-text {
+    font-weight: 600;
+    color: $success-text;
+  }
+  .info-text {
+    text-transform: capitalize;
+  }
+  .number {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: $textDark;
+    margin-left: auto;
+  }
+}
+.progress-card {
+  .mat-mdc-card-content {
+    padding: 24px 24px 48px;
+  }
+}
+.overview-card {
+  height: calc(100% - 30px);
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 200px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, $success-dark 0%, $yellow-light 99.98%);
+  }
+  .mat-mdc-card-header {
+    position: relative;
+    z-index: 1;
+    border-bottom: none;
+    padding: 19px 22px 67px;
+    .mdc-button--raised {
+      box-shadow: none !important;
+      background-color: rgba($color: $white, $alpha: 0.24);
+      color: $white;
+      height: 34px;
+      padding: 6px 16px;
+      border-radius: 6px;
+      text-transform: capitalize;
+    }
+    .mat-mdc-card-title {
+      color: $white;
+    }
+  }
+  .mat-mdc-card-content {
+    padding-bottom: 30px;
+  }
+}
+.todo-list-card {
+  height: calc(100% - 30px);
+  .mat-mdc-card-content {
+    padding-top: 10px;
+    padding-bottom: 22px;
+  }
+  --mdc-protected-button-label-text-transform: capitalize;
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  max-height: 364px;
+  height: 100%;
+  padding-right: 8px;
+  margin-right: -8px;
+  overflow: hidden auto;
+  li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+    margin-right: -6px;
+    padding: 3px 0;
+    .mat-mdc-checkbox.mat-primary {
+      --mdc-form-field-label-text-color: $textDarkGrey;
+    }
+    .btn-grp {
+      display: flex;
+      align-items: center;
+      .mdc-icon-button {
+        margin: -2px;
+      }
+    }
+  }
+}
+.memeber-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 400px;
+  height: 100%;
+  overflow: hidden auto;
+  padding-right: 8px;
+  margin-right: -8px;
+  .list-item {
+    display: flex;
+    align-items: center;
+    .content-block {
+      margin-left: 14px;
+      margin-right: auto;
+      p {
+        padding-bottom: 0;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: $textDarkGrey1;
+        margin-bottom: 6px;
+      }
+      .status {
+        position: relative;
+        font-size: 14px;
+        line-height: 18px;
+        color: $textDarkGrey;
+        padding-left: 24px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 14px;
+          width: 14px;
+          border-radius: 50%;
+        }
+        &.active {
+          &:before {
+            background-color: $status-active;
+          }
+        }
+        &.inactive {
+          &:before {
+            background-color: $status-inactive;
+          }
+        }
+      }
+    }
+    .mdc-button {
+      min-width: auto;
+      text-transform: capitalize;
+    }
+  }
+}
+.member-card {
+  height: calc(100% - 30px);
+}
+
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+  .statistic-outer {
+    &:first-child,
+    &:last-child {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .todo-list-card {
+    .mat-mdc-card-content {
+      padding-top: 6px;
+      padding-bottom: 16px;
+    }
+    li {
+      padding: 0;
+    }
+  }
+  .sales-card,
+  .member-card,
+  .overview-card,
+  .todo-list-card {
+    height: calc(100% - 24px);
+  }
+  .overview-card {
+    .mat-mdc-card-header {
+      padding: 16px 16px;
+    }
+    .mat-mdc-card-content {
+      padding-bottom: 16px;
+    }
+  }
+  .progress-card {
+    .mat-mdc-card-content {
+      padding: 16px;
+    }
+  }
+  .chart-outer {
+    margin-bottom: 20px;
+  }
+  .users-row {
+    padding-bottom: 20px;
+    .number {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .statistic-outer {
+    grid-template-columns: auto auto;
+    .statistic-block {
+      &:nth-child(3)::before {
+        display: none;
+      }
+      .content-block {
+        .numbers {
+          font-size: 26px;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+  .overview-card {
+    .mat-mdc-card-header {
+      padding-bottom: 0;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .statistic-outer {
+    gap: 20px 30px;
+    .statistic-block {
+      &:not(:first-child)::before {
+        left: -15px;
+      }
+      .content-block {
+        .numbers {
+          font-size: 22px;
+          line-height: 26px;
+        }
+      }
+      .icon-block {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .statistic-outer {
+    padding: 16px !important;
+    grid-template-columns: auto;
+    .statistic-block {
+      &:not(:first-child)::before {
+        display: none;
+      }
+    }
+  }
+  .sales-card,
+  .member-card,
+  .overview-card,
+  .todo-list-card {
+    height: auto;
+  }
+}

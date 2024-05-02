@@ -1,0 +1,58 @@
+@import "../../../assets/scss/variable.scss";
+.checkbox-grp {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: -2px;
+}
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-end;
+}
+.order-list-card {
+  .mat-mdc-card-header {
+    padding: 20px 22px 19px;
+  }
+}
+.row {
+  --bs-gutter-x: 30px;
+  > div {
+    margin-bottom: var(--bs-gutter-x);
+  }
+}
+.form-control-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: space-between;
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+  .order-list-card {
+    .mat-mdc-card-header {
+      padding: 16px 16px 15px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .form-control-wrapper {
+    flex-direction: row;
+    gap: 30px;
+    .mat-mdc-form-field {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .row {
+    --bs-gutter-x: 20px;
+  }
+  .form-control-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

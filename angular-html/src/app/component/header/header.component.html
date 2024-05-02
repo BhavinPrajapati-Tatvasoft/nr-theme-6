@@ -1,0 +1,32 @@
+<header class="header">
+    <mat-toolbar>
+        <button mat-icon-button class="menu-icon" color="primary" (click)="toggleMenu()">
+            <img src="./assets/images/menu-icon.svg" alt="Menu" />
+        </button>
+        <a routerLink="/" title="Company" class="logo">
+            <img src="./assets/images/mobile-logo.svg" alt="Company" />
+        </a>
+        <mat-form-field appearance="outline" class="search-input">
+            <input matInput placeholder="Search..." />
+        </mat-form-field>
+        <div class="action-row">
+            <button mat-icon-button color="primary" (click)="toggleSearch()" class="d-sm-none d-flex">
+                <img src="./assets/images/search-icon.svg" alt="Search" />
+            </button>
+            <button mat-icon-button color="primary" matBadge="5" class="notification-btn">
+                <img src="./assets/images/notification-icon.svg" alt="Notification" />
+            </button>
+            <button mat-icon-button color="primary" matBadge="5">
+                <img src="./assets/images/message-icon.svg" alt="Message" />
+            </button>
+        </div>
+    </mat-toolbar>
+    <div class="search-overlay" (click)="removeSearch()">
+    </div>
+    <div class="mobile-search">
+        <input type="text" class="form-control" placeholder="Search">
+        <button mat-icon-button color="primary" class="search-icon-btn">
+            <img src="./assets/images/search-icon.svg" />
+        </button>
+    </div>
+</header>

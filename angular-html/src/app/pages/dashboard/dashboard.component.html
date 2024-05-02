@@ -1,0 +1,274 @@
+<h4 data-aos="fade-in">Dashboard</h4>
+<mat-card data-aos="fade-up" data-aos-delay="100">
+    <mat-card-content class="statistic-outer">
+        <div class="statistic-block">
+            <div class="content-block">
+                <p class="label">Growth</p>
+                <p class="numbers" [countUp]="27.84" [options]="countUpOption1" [reanimateOnClick]="false"></p>
+            </div>
+            <i class="icon-block yellow">
+                <img src="./assets/images/growth-icon.svg" alt="Growth" />
+            </i>
+        </div>
+        <div class="statistic-block">
+            <div class="content-block">
+                <p class="label">Orders</p>
+                <p class="numbers" [countUp]="2784" [options]="countUpOption2" [reanimateOnClick]="false"></p>
+            </div>
+            <i class="icon-block blue">
+                <img src="./assets/images/orders-icon.svg" alt="Orders" />
+            </i>
+        </div>
+        <div class="statistic-block">
+            <div class="content-block">
+                <p class="label">Sales</p>
+                <p class="numbers" [countUp]="278" [options]="countUpOption3" [reanimateOnClick]="false"></p>
+            </div>
+            <i class="icon-block green">
+                <img src="./assets/images/sales-icon.svg" alt="Sales" />
+            </i>
+        </div>
+        <div class="statistic-block">
+            <div class="content-block">
+                <p class="label">Revenue</p>
+                <p class="numbers" [countUp]="74" [options]="countUpOption3" [reanimateOnClick]="false"></p>
+            </div>
+            <i class="icon-block purple">
+                <img src="./assets/images/revenue-icon.svg" alt="Revenue" />
+            </i>
+        </div>
+    </mat-card-content>
+</mat-card>
+<div class="row">
+    <div class="col-lg-6">
+        <mat-card class="sales-card" data-aos="fade-up" data-aos-delay="200">
+            <mat-card-header>
+                <mat-card-title>Sales</mat-card-title>
+                <button mat-icon-button color="primary">
+                    <img src="./assets/images/action-icon.svg" alt="Action" />
+                </button>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="chart-outer">
+                    <canvas id="salesChart" aria-label="chart" role="img" width="100%"></canvas>
+                </div>
+                <div class="products-outer">
+                    <div class="product-block">
+                        <p class="number">2,201</p>
+                        <p class="product-name">IPhones</p>
+                    </div>
+                    <div class="product-block">
+                        <p class="number">5,320</p>
+                        <p class="product-name">Laptops</p>
+                    </div>
+                    <div class="product-block">
+                        <p class="number">3,450</p>
+                        <p class="product-name">Tablets</p>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6">
+        <mat-card class="overview-card" data-aos="fade-up" data-aos-delay="300">
+            <mat-card-header>
+                <mat-card-title>Daily Overview</mat-card-title>
+                <button mat-raised-button>Export</button>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-card class="progress-card">
+                    <mat-card-content>
+                        <div class="users-row">
+                            <div class="users-block">
+                                <p class="number">4,320K</p>
+                                <p class="label">Total users</p>
+                            </div>
+                            <div class="users-block expected-user">
+                                <p class="number">8,320K</p>
+                                <p class="label">Expected users</p>
+                            </div>
+                        </div>
+                        <mat-progress-bar mode="determinate" value="62"></mat-progress-bar>
+                        <div class="progress-info">
+                            <img src="./assets/images/up-arrow-green-icon.svg" alt="Arrow" />
+                            <span class="success-text">24%</span>
+                            <p class="info-text">Since yesterday</p>
+                            <p class="number">62%</p>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+                <mat-card class="progress-card">
+                    <mat-card-content>
+                        <div class="users-row">
+                            <div class="users-block">
+                                <p class="number">4,320K</p>
+                                <p class="label">Total Sales</p>
+                            </div>
+                            <div class="users-block expected-user">
+                                <p class="number">8,320K</p>
+                                <p class="label">Expected Sales</p>
+                            </div>
+                        </div>
+                        <mat-progress-bar mode="determinate" value="73" class="pink-progress"></mat-progress-bar>
+                        <div class="progress-info">
+                            <img src="./assets/images/up-arrow-green-icon.svg" alt="Arrow" />
+                            <span class="success-text">42%</span>
+                            <p class="info-text">Since yesterday</p>
+                            <p class="number">73%</p>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6">
+        <mat-card class="todo-list-card" data-aos="fade-up" data-aos-delay="400">
+            <mat-card-header>
+                <mat-card-title>To Do</mat-card-title>
+                <div class="btn-grp custom-tab-btn">
+                    <button mat-button (click)="showCompleted = false" [class.selected]="!showCompleted">All</button>
+                    <button mat-button (click)="showCompleted = true"
+                        [class.selected]="showCompleted">Completed</button>
+                </div>
+            </mat-card-header>
+            <mat-card-content>
+                <ul class="todo-list">
+                    <li *ngFor="let task of filterTasks()" [class.checked]="task.checked">
+                        <mat-checkbox color="primary" [(ngModel)]="task.checked">{{ task.description }}</mat-checkbox>
+                        <div class="btn-grp">
+                            <button mat-icon-button color="primary">
+                                <img src="./assets/images/edit-icon.svg" alt="Edit" />
+                            </button>
+                            <button mat-icon-button color="primary">
+                                <img src="./assets/images/delete-icon.svg" alt="Delete" />
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <button mat-raised-button color="primary" class="sm-icon pre-icon">
+                    <img src="./assets/images/add-icon.svg" alt="Add" />
+                    Add Task
+                </button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-6">
+        <mat-card class="member-card" data-aos="fade-up" data-aos-delay="500">
+            <mat-card-header>
+                <mat-card-title>Members</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <ul class="memeber-list">
+                    <li class="list-item">
+                        <img src="./assets/images/profile1.svg" alt="Profile" />
+                        <div class="content-block">
+                            <p>Daizy Robert</p>
+                            <div class="status active">
+                                Active
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary">
+                            Add
+                        </button>
+                    </li>
+                    <li class="list-item">
+                        <img src="./assets/images/profile2.svg" alt="Profile" />
+                        <div class="content-block">
+                            <p>Daizy Robert</p>
+                            <div class="status active">
+                                Active
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary">
+                            Add
+                        </button>
+                    </li>
+                    <li class="list-item">
+                        <img src="./assets/images/profile3.svg" alt="Profile" />
+                        <div class="content-block">
+                            <p>Daizy Robert</p>
+                            <div class="status inactive">
+                                In Active
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary">
+                            Add
+                        </button>
+                    </li>
+                    <li class="list-item">
+                        <img src="./assets/images/profile4.svg" alt="Profile" />
+                        <div class="content-block">
+                            <p>Daizy Robert</p>
+                            <div class="status inactive">
+                                In Active
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary">
+                            Add
+                        </button>
+                    </li>
+                    <li class="list-item">
+                        <img src="./assets/images/profile1.svg" alt="Profile" />
+                        <div class="content-block">
+                            <p>Daizy Robert</p>
+                            <div class="status active">
+                                Active
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary">
+                            Add
+                        </button>
+                    </li>
+                    <li class="list-item">
+                        <img src="./assets/images/profile2.svg" alt="Profile" />
+                        <div class="content-block">
+                            <p>Daizy Robert</p>
+                            <div class="status inactive">
+                                In Active
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary">
+                            Add
+                        </button>
+                    </li>
+                    <li class="list-item">
+                        <img src="./assets/images/profile4.svg" alt="Profile" />
+                        <div class="content-block">
+                            <p>Daizy Robert</p>
+                            <div class="status inactive">
+                                In Active
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary">
+                            Add
+                        </button>
+                    </li>
+                    <li class="list-item">
+                        <img src="./assets/images/profile1.svg" alt="Profile" />
+                        <div class="content-block">
+                            <p>Daizy Robert</p>
+                            <div class="status active">
+                                Active
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary">
+                            Add
+                        </button>
+                    </li>
+                    <li class="list-item">
+                        <img src="./assets/images/profile2.svg" alt="Profile" />
+                        <div class="content-block">
+                            <p>Daizy Robert</p>
+                            <div class="status inactive">
+                                In Active
+                            </div>
+                        </div>
+                        <button mat-raised-button color="primary">
+                            Add
+                        </button>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

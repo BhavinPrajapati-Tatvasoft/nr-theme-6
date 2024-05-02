@@ -1,0 +1,111 @@
+<aside class="sidebar">
+    <a routerLink="/" title="Company" class="logo">
+        <img src="./assets/images/logo.svg" alt="Company" />
+    </a>
+    <ul class="nav-list middle-list">
+        <li class="nav-item">
+            <a class="nav-link" title="Dashboard" routerLinkActive="active" routerLink="/dashboard"
+                (click)="removeMenu()">
+                <i class="icon-block">
+                    <img src="./assets/images/dashboard-default-icon.svg" alt="Dashboard" class="default-icon" />
+                    <img src="./assets/images/dashboard-active-icon.svg" alt="Dashboard" class="active-icon" />
+                </i>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item has-submenu">
+            <a class="nav-link" (click)="toggleSubMenu($event)" [class.active]="productDetailLink.isActive||productListLink.isActive" title="Product">
+                <i class="icon-block">
+                    <img src="./assets/images/product-default-icon.svg" alt="Product" class="default-icon" />
+                    <img src="./assets/images/product-active-icon.svg" alt="Product" class="active-icon" />
+                </i>
+                <span>Product</span>
+            </a>
+            <ul class="sub-menu">
+                <li class="list-item">
+                    <a routerLink="/product" #productDetailLink="routerLinkActive" routerLinkActive="active"
+                        (click)="removeMenu()" title="Product details" class="list-link">
+                        <img src="./assets/images/product-details-icon.svg" alt="Product details" />
+                        <span>Product details</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/innerpage" #productListLink="routerLinkActive" routerLinkActive="active"
+                        (click)="removeMenu()" title="Product List" class="list-link">
+                        <img src="./assets/images/product-list-icon.svg" alt="Product List" />
+                        <span>Product List</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" title="Report" routerLinkActive="active" routerLink="/Report" (click)="removeMenu()">
+                <i class="icon-block">
+                    <img src="./assets/images/report-default-icon.svg" alt="Report" class="default-icon" />
+                    <img src="./assets/images/report-active-icon.svg" alt="Report" class="active-icon" />
+                </i>
+                <span>Report</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" title="Transaction" routerLinkActive="active" routerLink="/Transaction"
+                (click)="removeMenu()">
+                <i class="icon-block">
+                    <img src="./assets/images/transaction-default-icon.svg" alt="Transaction" class="default-icon" />
+                    <img src="./assets/images/transaction-active-icon.svg" alt="Transaction" class="active-icon" />
+                </i>
+                <span>Transaction</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" title="Email" routerLinkActive="active" routerLink="/Email" (click)="removeMenu()">
+                <i class="icon-block">
+                    <img src="./assets/images/email-default-icon.svg" alt="Email" class="default-icon" />
+                    <img src="./assets/images/email-active-icon.svg" alt="Email" class="active-icon" />
+                </i>
+                <span>Email</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="nav-list bottom-list">
+        <li class="nav-item profile">
+            <button mat-button [matMenuTriggerFor]="menu">
+                <img src="./assets/images/user-profile-img.svg" alt="Profile">
+                <span class="content-block">
+                    <span class="user-name">Daizy Robert</span>
+                    <span class="role">Sales Manager</span>
+                </span>
+            </button>
+            <mat-menu #menu="matMenu" class="profile-menu" yPosition="above" xPosition="before">
+                <button mat-menu-item>
+                    Profile
+                    <img src="./assets/images/profile-icon.svg" alt="Profile" />
+                </button>
+                <a routerLink="/" mat-menu-item>
+                    Logout
+                    <img src="./assets/images/logout-icon.svg" alt="Logout" />
+                </a>
+            </mat-menu>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" title="Settings" routerLinkActive="active" routerLink="/Settings"
+                (click)="removeMenu()">
+                <i class="icon-block">
+                    <img src="./assets/images/settings-default-icon.svg" alt="Settings" class="default-icon" />
+                    <img src="./assets/images/settings-active-icon.svg" alt="Settings" class="active-icon" />
+                </i>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" title="Help" routerLinkActive="active" routerLink="/Help" (click)="removeMenu()">
+                <i class="icon-block">
+                    <img src="./assets/images/help-default-icon.svg" alt="Help" class="default-icon" />
+                    <img src="./assets/images/help-active-icon.svg" alt="Help" class="active-icon" />
+                </i>
+                <span>Help</span>
+            </a>
+        </li>
+    </ul>
+</aside>
+<div class="sidebar-overlay" (click)="removeMenu()"></div>

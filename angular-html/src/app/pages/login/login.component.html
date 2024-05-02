@@ -1,0 +1,52 @@
+<div class="login-wrapper">
+    <div class="login-left-block">
+        <a routerLink="/" title="Logo" class="logo" data-aos="zoom-in">
+            <img src="./assets/images/login-logo.svg" alt="Logo" />
+        </a>
+        <div class="content-block">
+            <h1 data-aos="fade-up" data-aos-delay="100">Start Your Journey
+                with us.</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry.</p>
+            <button mat-stroked-button class="btn-outlined-white" data-aos="fade-up" data-aos-delay="300">Get
+                Started</button>
+
+        </div>
+    </div>
+    <div class="login-right-block">
+        <div class="login-card">
+            <a routerLink="#" title="Logo" class="logo d-inline-block d-lg-none mb-4" data-aos="fade-up"
+                data-aos-delay="100">
+                <img src="./assets/images/logo.svg" alt="Logo" />
+            </a>
+            <h3 data-aos="fade-up" data-aos-delay="100">Login</h3>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h5>Welcome back!</h5>
+                <p>Please enter your details</p>
+                <mat-form-field appearance="outline" class="username-field">
+                    <mat-label>Username</mat-label>
+                    <input matInput />
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="password-field">
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <img [src]="hide
+                                        ?'./assets/images/show-password-icon.svg':'./assets/images/hide-password-icon.svg'"
+                            alt="Show Password" />
+                    </button>
+                </mat-form-field>
+                <div class="action-wrapper">
+                    <mat-checkbox color="primary">Remember Me</mat-checkbox>
+                    <a routerLink="/" title="Forgot Password?">Forgot Password?</a>
+                </div>
+                <a routerLink="/dashboard" mat-flat-button color="primary" title="Log in">Log in</a>
+                <p class="sign-up-text">Don’t have an account? <a routerLink="/" title="Sign up"
+                        class="primary-link">Sign
+                        up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

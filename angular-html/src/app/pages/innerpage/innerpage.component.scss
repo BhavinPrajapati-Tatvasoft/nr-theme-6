@@ -1,0 +1,74 @@
+@import "../../../assets/scss/variable.scss";
+.checkbox-grp {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-top: -2px;
+}
+.mat-mdc-radio-group {
+  padding-bottom: 24px;
+}
+.btn-grp {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 25px;
+}
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 13px 8px 13px 16px;
+  p {
+    padding-bottom: 0;
+  }
+  &.success {
+    color: $alert-success-text;
+    border-color: $alert-success-outline;
+    background-color: rgba($alert-success-text, 0.1);
+  }
+  &.info {
+    color: $alert-info-text;
+    border-color: $alert-info-outline;
+    background-color: rgba($alert-info-text, 0.1);
+  }
+  &.warning {
+    color: $alert-warning-text;
+    border-color: $alert-warning-outline;
+    background-color: rgba($alert-warning-text, 0.1);
+  }
+  &.error {
+    color: $alert-error-text;
+    border-color: $alert-error-outline;
+    background-color: rgba($alert-error-text, 0.1);
+  }
+  .mdc-icon-button {
+    margin-left: auto;
+  }
+}
+.row {
+  --bs-gutter-x: 30px;
+  > div {
+    margin-bottom: var(--bs-gutter-x);
+  }
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 991px) {
+  .row {
+    --bs-gutter-x: 20px;
+    > div {
+      margin-bottom: var(--bs-gutter-x);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .alert {
+    gap: 8px;
+  }
+}
