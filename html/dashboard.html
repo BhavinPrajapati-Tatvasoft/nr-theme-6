@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard | nr-theme-6</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Meta descriptions may be included in search results to concisely summarize page content.">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header Start -->
+        <header class="header">
+            <button type="button" class="btn icon-btn d-xxl-none menu-btn">
+                <img src="images/menu-icon.svg" alt="Manu" />
+            </button>
+            <a href="index.html" title="Logo" class="logo d-xxl-none">
+                <img src="images/mobile-logo.svg" alt="Logo" />
+            </a>
+            <input type="text" class="form-control" id="search" placeholder="Search..." />
+            <div class="action-wrapper">
+                <button type="button" class="btn icon-btn search-btn">
+                    <img src="images/search-dark-icon.svg" alt="Search" />
+                </button>
+                <button type="button" class="btn icon-btn notification-btn">
+                    <span class="badge">5</span>
+                    <img src="images/notification-icon.svg" alt="Notification" />
+                </button>
+                <button type="button" class="btn icon-btn">
+                    <span class="badge">5</span>
+                    <img src="images/message-icon.svg" alt="Message" />
+                </button>
+            </div>
+        </header>
+        <div class="mobile-search">
+            <input type="text" class="form-control" placeholder="Search">
+            <button mat-icon-button color="primary" class="search-icon-btn btn">
+                <img src="images/search-icon.svg" />
+            </button>
+        </div>
+        <div class="search-overlay"></div>
+        <!-- Header End -->
+
+        <!-- Sidebar Start -->
+        <aside class="sidebar">
+            <div class="logo-wrapper">
+                <a href="index.html" title="Company" class="logo">
+                    <img src="images/logo.svg" alt="Company" />
+                </a>
+            </div>
+            <ul class="nav-list middle-list">
+                <li class="nav-item">
+                    <a class="nav-link active" title="Dashboard" href="dashboard.html">
+                        <i class="icon-block">
+                            <img src="images/dashboard-default-icon.svg" alt="Dashboard" class="default-icon" />
+                            <img src="images/dashboard-active-icon.svg" alt="Dashboard" class="active-icon" />
+                        </i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a class="nav-link" title="Product">
+                        <i class="icon-block">
+                            <img src="images/product-default-icon.svg" alt="Product" class="default-icon" />
+                            <img src="images/product-active-icon.svg" alt="Product" class="active-icon" />
+                        </i>
+                        <span>Product</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="list-item">
+                            <a href="product.html" title="Product details" class="list-link">
+                                <img src="images/product-details-icon.svg" alt="Product details" />
+                                <span>Product details</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="innerpage.html" title="Product List" class="list-link">
+                                <img src="images/product-list-icon.svg" alt="Product List" />
+                                <span>Product List</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Report" href="#">
+                        <i class="icon-block">
+                            <img src="images/report-default-icon.svg" alt="Report" class="default-icon" />
+                            <img src="images/report-active-icon.svg" alt="Report" class="active-icon" />
+                        </i>
+                        <span>Report</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Transaction" href="#">
+                        <i class="icon-block">
+                            <img src="images/transaction-default-icon.svg" alt="Transaction" class="default-icon" />
+                            <img src="images/transaction-active-icon.svg" alt="Transaction" class="active-icon" />
+                        </i>
+                        <span>Transaction</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Email" href="#">
+                        <i class="icon-block">
+                            <img src="images/email-default-icon.svg" alt="Email" class="default-icon" />
+                            <img src="images/email-active-icon.svg" alt="Email" class="active-icon" />
+                        </i>
+                        <span>Email</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav-list bottom-list">
+                <li class="nav-item profile dropdown dropup">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/user-profile-img.svg" alt="Profile">
+                        <span class="content-block">
+                            <span class="user-name">Daizy Robert</span>
+                            <span class="role">Sales Manager</span>
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end profile-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">Profile
+                                <img src="images/profile-icon.svg" alt="Profile" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="index.html">
+                                Logout
+                                <img src="images/logout-icon.svg" alt="Logout" />
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Settings" href="#">
+                        <i class="icon-block">
+                            <img src="images/settings-default-icon.svg" alt="Settings" class="default-icon" />
+                            <img src="images/settings-active-icon.svg" alt="Settings" class="active-icon" />
+                        </i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Help" href="#">
+                        <i class="icon-block">
+                            <img src="images/help-default-icon.svg" alt="Help" class="default-icon" />
+                            <img src="images/help-active-icon.svg" alt="Help" class="active-icon" />
+                        </i>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="sidebar-overlay"></div>
+        <!-- Sidebar End -->
+
+        <main class="main-content">
+            <h4 data-aos="fade-in">Dashboard</h4>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-body statistic-outer">
+                    <div class="statistic-block">
+                        <div class="content-block">
+                            <p class="label">Growth</p>
+                            <p class="numbers countup1">+<span>27.84</span>k</p>
+                        </div>
+                        <i class="icon-block yellow">
+                            <img src="images/growth-icon.svg" alt="Growth" />
+                        </i>
+                    </div>
+                    <div class="statistic-block">
+                        <div class="content-block">
+                            <p class="label">Orders</p>
+                            <p class="numbers countup2">2784</p>
+                        </div>
+                        <i class="icon-block blue">
+                            <img src="images/orders-icon.svg" alt="Orders" />
+                        </i>
+                    </div>
+                    <div class="statistic-block">
+                        <div class="content-block">
+                            <p class="label">Sales</p>
+                            <p class="numbers countup3">$<span>278</span>k</p>
+                        </div>
+                        <i class="icon-block green">
+                            <img src="images/sales-icon.svg" alt="Sales" />
+                        </i>
+                    </div>
+                    <div class="statistic-block">
+                        <div class="content-block">
+                            <p class="label">Revenue</p>
+                            <p class="numbers countup4">$<span>74</span>k</p>
+                        </div>
+                        <i class="icon-block purple">
+                            <img src="images/revenue-icon.svg" alt="Revenue" />
+                        </i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card sales-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-header">
+                            <h6>Sales</h6>
+                            <button type="button" class="btn icon-btn">
+                                <img src="images/action-icon.svg" alt="Action" />
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-outer">
+                                <canvas id="salesChart" width="400" height="400"></canvas>
+                            </div>
+                            <div class="products-outer">
+                                <div class="product-block">
+                                    <p class="number">2,201</p>
+                                    <p class="product-name">IPhones</p>
+                                </div>
+                                <div class="product-block">
+                                    <p class="number">5,320</p>
+                                    <p class="product-name">Laptops</p>
+                                </div>
+                                <div class="product-block">
+                                    <p class="number">3,450</p>
+                                    <p class="product-name">Tablets</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card overview-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-header">
+                            <h6>Daily Overview</h6>
+                            <button type="button" class="btn text-white-btn">
+                                Export
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="card progress-card">
+                                <div class="card-body">
+                                    <div class="users-row">
+                                        <div class="users-block">
+                                            <p class="number">4,320K</p>
+                                            <p class="label">Total users</p>
+                                        </div>
+                                        <div class="users-block expected-user">
+                                            <p class="number">8,320K</p>
+                                            <p class="label">Expected users</p>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-primary" role="progressbar" aria-valuenow="62"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 62%"></div>
+                                    </div>
+                                    <div class="progress-info">
+                                        <img src="images/up-arrow-green-icon.svg" alt="Arrow" />
+                                        <span class="success-text">24%</span>
+                                        <p class="info-text">Since yesterday</p>
+                                        <p class="number">62%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card progress-card mb-0">
+                                <div class="card-body">
+                                    <div class="users-row">
+                                        <div class="users-block">
+                                            <p class="number">4,320K</p>
+                                            <p class="label">Total Sales</p>
+                                        </div>
+                                        <div class="users-block expected-user">
+                                            <p class="number">8,320K</p>
+                                            <p class="label">Expected Sales</p>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-secondary" role="progressbar" aria-valuenow="73"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar" style="width: 73%"></div>
+                                    </div>
+                                    <div class="progress-info">
+                                        <img src="images/up-arrow-green-icon.svg" alt="Arrow" />
+                                        <span class="success-text">42%</span>
+                                        <p class="info-text">Since yesterday</p>
+                                        <p class="number">73%</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card todo-list-card h-auto" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-header">
+                            <h6>To Do</h6>
+                            <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-all" type="button" role="tab" aria-controls="pills-all"
+                                        aria-selected="true">All</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-completed-tab" data-bs-toggle="pill"
+                                        data-bs-target="#pills-completed" type="button" role="tab"
+                                        aria-controls="pills-completed" aria-selected="false">Completed</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-all" role="tabpanel"
+                                    aria-labelledby="pills-all-tab" tabindex="0">
+                                    <ul class="todo-list">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option1">
+                                                <label class="form-check-label" for="option1">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option2"
+                                                    checked />
+                                                <label class="form-check-label" for="option2">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option3">
+                                                <label class="form-check-label" for="option3">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option4">
+                                                <label class="form-check-label" for="option4">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option5">
+                                                <label class="form-check-label" for="option5">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option6"
+                                                    checked />
+                                                <label class="form-check-label" for="option6">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option7"
+                                                    checked />
+                                                <label class="form-check-label" for="option7">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option8">
+                                                <label class="form-check-label" for="option8">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option9"
+                                                    checked />
+                                                <label class="form-check-label" for="option9">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane fade" id="pills-completed" role="tabpanel"
+                                    aria-labelledby="pills-completed-tab" tabindex="0">
+                                    <ul class="todo-list">
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option11"
+                                                    checked />
+                                                <label class="form-check-label" for="option11">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option12"
+                                                    checked />
+                                                <label class="form-check-label" for="option12">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option13"
+                                                    checked />
+                                                <label class="form-check-label" for="option13">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="option14"
+                                                    checked />
+                                                <label class="form-check-label" for="option14">
+                                                    Managing other tasks.
+                                                </label>
+                                            </div>
+                                            <div class="btn-grp">
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                </button>
+                                                <button type="button" class="btn icon-btn">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button type="button" class="btn text-btn pre-icon">
+                                <img src="images/add-icon.svg" alt="Add" />
+                                <span>Add Task</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card member-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="card-header">
+                            <h6>Members</h6>
+                        </div>
+                        <div class="card-body">
+                            <ul class="memeber-list">
+                                <li class="list-item">
+                                    <img src="images/profile1.svg" alt="Profile" />
+                                    <div class="content-block">
+                                        <p>Daizy Robert</p>
+                                        <div class="status active">
+                                            Active
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn text-btn"><span>Add</span></button>
+                                </li>
+                                <li class="list-item">
+                                    <img src="images/profile2.svg" alt="Profile" />
+                                    <div class="content-block">
+                                        <p>Daizy Robert</p>
+                                        <div class="status active">
+                                            Active
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn text-btn"><span>Add</span></button>
+                                </li>
+                                <li class="list-item">
+                                    <img src="images/profile3.svg" alt="Profile" />
+                                    <div class="content-block">
+                                        <p>Daizy Robert</p>
+                                        <div class="status inactive">
+                                            In Active
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn text-btn"><span>Add</span></button>
+                                </li>
+                                <li class="list-item">
+                                    <img src="images/profile4.svg" alt="Profile" />
+                                    <div class="content-block">
+                                        <p>Daizy Robert</p>
+                                        <div class="status inactive">
+                                            In Active
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn text-btn"><span>Add</span></button>
+                                </li>
+                                <li class="list-item">
+                                    <img src="images/profile1.svg" alt="Profile" />
+                                    <div class="content-block">
+                                        <p>Daizy Robert</p>
+                                        <div class="status active">
+                                            Active
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn text-btn"><span>Add</span></button>
+                                </li>
+                                <li class="list-item">
+                                    <img src="images/profile2.svg" alt="Profile" />
+                                    <div class="content-block">
+                                        <p>Daizy Robert</p>
+                                        <div class="status inactive">
+                                            In Active
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn text-btn"><span>Add</span></button>
+                                </li>
+                                <li class="list-item">
+                                    <img src="images/profile4.svg" alt="Profile" />
+                                    <div class="content-block">
+                                        <p>Daizy Robert</p>
+                                        <div class="status inactive">
+                                            In Active
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn text-btn"><span>Add</span></button>
+                                </li>
+                                <li class="list-item">
+                                    <img src="images/profile1.svg" alt="Profile" />
+                                    <div class="content-block">
+                                        <p>Daizy Robert</p>
+                                        <div class="status active">
+                                            Active
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn text-btn"><span>Add</span></button>
+                                </li>
+                                <li class="list-item">
+                                    <img src="images/profile2.svg" alt="Profile" />
+                                    <div class="content-block">
+                                        <p>Daizy Robert</p>
+                                        <div class="status inactive">
+                                            In Active
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn text-btn"><span>Add</span></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>©2022 Company. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Innerpage | nr-theme-6</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Meta descriptions may be included in search results to concisely summarize page content.">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header Start -->
+        <header class="header">
+            <button type="button" class="btn icon-btn d-xxl-none menu-btn">
+                <img src="images/menu-icon.svg" alt="Manu" />
+            </button>
+            <a href="index.html" title="Logo" class="logo d-xxl-none">
+                <img src="images/mobile-logo.svg" alt="Logo" />
+            </a>
+            <input type="text" class="form-control" id="search" placeholder="Search..." />
+            <div class="action-wrapper">
+                <button type="button" class="btn icon-btn search-btn">
+                    <img src="images/search-dark-icon.svg" alt="Search" />
+                </button>
+                <button type="button" class="btn icon-btn notification-btn">
+                    <span class="badge">5</span>
+                    <img src="images/notification-icon.svg" alt="Notification" />
+                </button>
+                <button type="button" class="btn icon-btn">
+                    <span class="badge">5</span>
+                    <img src="images/message-icon.svg" alt="Message" />
+                </button>
+            </div>
+        </header>
+        <div class="mobile-search">
+            <input type="text" class="form-control" placeholder="Search">
+            <button mat-icon-button color="primary" class="search-icon-btn btn">
+                <img src="images/search-icon.svg" />
+            </button>
+        </div>
+        <div class="search-overlay"></div>
+        <!-- Header End -->
+
+        <!-- Sidebar Start -->
+        <aside class="sidebar">
+            <div class="logo-wrapper">
+                <a href="index.html" title="Company" class="logo">
+                    <img src="images/logo.svg" alt="Company" />
+                </a>
+            </div>
+            <ul class="nav-list middle-list">
+                <li class="nav-item">
+                    <a class="nav-link" title="Dashboard" href="dashboard.html">
+                        <i class="icon-block">
+                            <img src="images/dashboard-default-icon.svg" alt="Dashboard" class="default-icon" />
+                            <img src="images/dashboard-active-icon.svg" alt="Dashboard" class="active-icon" />
+                        </i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a class="nav-link active" title="Product">
+                        <i class="icon-block">
+                            <img src="images/product-default-icon.svg" alt="Product" class="default-icon" />
+                            <img src="images/product-active-icon.svg" alt="Product" class="active-icon" />
+                        </i>
+                        <span>Product</span>
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="list-item">
+                            <a href="product.html" title="Product details" class="list-link">
+                                <img src="images/product-details-icon.svg" alt="Product details" />
+                                <span>Product details</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="innerpage.html" title="Product List" class="list-link">
+                                <img src="images/product-list-icon.svg" alt="Product List" />
+                                <span>Product List</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Report" href="#">
+                        <i class="icon-block">
+                            <img src="images/report-default-icon.svg" alt="Report" class="default-icon" />
+                            <img src="images/report-active-icon.svg" alt="Report" class="active-icon" />
+                        </i>
+                        <span>Report</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Transaction" href="#">
+                        <i class="icon-block">
+                            <img src="images/transaction-default-icon.svg" alt="Transaction" class="default-icon" />
+                            <img src="images/transaction-active-icon.svg" alt="Transaction" class="active-icon" />
+                        </i>
+                        <span>Transaction</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Email" href="#">
+                        <i class="icon-block">
+                            <img src="images/email-default-icon.svg" alt="Email" class="default-icon" />
+                            <img src="images/email-active-icon.svg" alt="Email" class="active-icon" />
+                        </i>
+                        <span>Email</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav-list bottom-list">
+                <li class="nav-item profile dropdown dropup">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/user-profile-img.svg" alt="Profile">
+                        <span class="content-block">
+                            <span class="user-name">Daizy Robert</span>
+                            <span class="role">Sales Manager</span>
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end profile-menu">
+                        <li>
+                            <a class="dropdown-item" href="#">Profile
+                                <img src="images/profile-icon.svg" alt="Profile" />
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="index.html">
+                                Logout
+                                <img src="images/logout-icon.svg" alt="Logout" />
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Settings" href="#">
+                        <i class="icon-block">
+                            <img src="images/settings-default-icon.svg" alt="Settings" class="default-icon" />
+                            <img src="images/settings-active-icon.svg" alt="Settings" class="active-icon" />
+                        </i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" title="Help" href="#">
+                        <i class="icon-block">
+                            <img src="images/help-default-icon.svg" alt="Help" class="default-icon" />
+                            <img src="images/help-active-icon.svg" alt="Help" class="active-icon" />
+                        </i>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div class="sidebar-overlay"></div>
+        <!-- Sidebar End -->
+
+        <main class="main-content">
+            <h4 data-aos="fade-in">Product</h4>
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-header">
+                    <h6>
+                        Product Details
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <div class="row secondary-row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="productName" placeholder="Product Name" />
+                                <label for="productName">Product Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subText" placeholder="Sub Text" />
+                                <label for="subText">Sub Text</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-floating">
+                                <select class="form-select" id="select1">
+                                    <option selected>Select</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label for="select1">Select Category</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="form-floating">
+                                <textarea type="text" class="form-control" id="description"
+                                    placeholder="Product Description" rows="4"></textarea>
+                                <label for="description">Product Description</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-control-wrapper">
+                                <div class="form-floating prefix-icon">
+                                    <input type="text" class="form-control" id="amount" placeholder="Amount" />
+                                    <label for="amount">Amount</label>
+                                    <i class="icon">
+                                        <img src="images/dollar-icon.svg" alt="Dollar">
+                                    </i>
+                                </div>
+                                <div class="form-floating prefix-icon">
+                                    <input type="text" class="form-control" id="discount" placeholder="Discount" />
+                                    <label for="discount">Discount</label>
+                                    <i class="icon">
+                                        <img src="images/percent-icon.svg" alt="Discount">
+                                    </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <h6 class="pb-2">Status :</h6>
+                            <div class="checkbox-outer pb-0">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="option1">
+                                    <label class="form-check-label" for="option1">
+                                        Delivered
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="option2" checked>
+                                    <label class="form-check-label" for="option2">
+                                        Pending
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-auto">
+                            <h6 class="pb-2">Upload Product Image :</h6>
+                            <div class="upload-btn mb-0">
+                                <div class="file-upload">
+                                    <img src="images/upload-icon.svg" alt="Upload">
+                                    <span>Upload</span>
+                                </div>
+                                <input type="file" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="action-row mt-n-md-16">
+                        <button type="button" class="btn btn-primary">
+                            <span>Save</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <span>Cancel</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card order-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-header">
+                    <h6>Order List</h6>
+                    <button type="button" class="btn btn-outline-primary btn-sm pre-icon">
+                        <img src="images/add-primary-icon.svg" alt="Add" />
+                        <span>Add</span>
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive mb-2">
+                        <table class="table mb-2">
+                            <thead>
+                                <tr>
+                                    <th>Order Id</th>
+                                    <th>Customer</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>Killie Marquot</td>
+                                    <td>21 January, 22</td>
+                                    <td>$2,241.02</td>
+                                    <td>
+                                        <span class="status status-success">Shipped</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>Caroul Jenkins</td>
+                                    <td>16 January, 22</td>
+                                    <td>$2,241.02</td>
+                                    <td>
+                                        <span class="status status-failed">Cancelled</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>Carl Jenkins</td>
+                                    <td>09 Feburary, 22</td>
+                                    <td>$3,241.02</td>
+                                    <td>
+                                        <span class="status status-success">Shipped</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>Daizy Robert</td>
+                                    <td>05 May, 22</td>
+                                    <td>$2,241.02</td>
+                                    <td>
+                                        <span class="status status-pending">Awaiting Shipment</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>Killie Marquot</td>
+                                    <td>09 September, 22</td>
+                                    <td>$2,241.02</td>
+                                    <td>
+                                        <span class="status status-success">Shipped</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>Caroul Jenkins</td>
+                                    <td>16 September, 22</td>
+                                    <td>$2,241.02</td>
+                                    <td>
+                                        <span class="status status-success">Shipped</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>Carl Jenkins</td>
+                                    <td>01 October, 22</td>
+                                    <td>$2,241.02</td>
+                                    <td>
+                                        <span class="status status-pending">Awaiting Shipment</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>Daizy Robert</td>
+                                    <td>13 December, 22</td>
+                                    <td>$2,241.02</td>
+                                    <td>
+                                        <span class="status status-failed">Cancelled</span>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <img src="images/prev-icon.svg" alt="Prev" />
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link active" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">
+                                <img src="images/next-icon.svg" alt="Next" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>©2022 Company. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
