@@ -43,6 +43,7 @@
 .mat-typography h6,
 .mat-typography p {
   margin-bottom: 0;
+  letter-spacing: 0;
 }
 
 // Typography
@@ -98,6 +99,7 @@
   --mdc-outlined-text-field-label-text-tracking: 0;
   --mat-form-field-container-vertical-padding: 12px;
   --mat-form-field-container-height: 48px;
+  --mat-form-field-container-text-tracking: 0;
 
   // Select
   --mat-select-enabled-trigger-text-color: #404040;
@@ -404,7 +406,6 @@
 .mat-mdc-radio-group {
   display: flex;
   align-items: center;
-  gap: 27px;
   margin-left: -8px;
   .mat-mdc-radio-button {
     .mdc-radio__native-control {
@@ -562,7 +563,7 @@
   }
   .mat-mdc-tab-body {
     line-height: 20px;
-    padding: 18px 0;
+    padding: 18px 0 0;
     .mat-mdc-tab-body-content {
       p:not(:last-child) {
         padding-bottom: 16px;
@@ -670,6 +671,7 @@
 .mat-mdc-progress-bar {
   border-radius: 50px;
   --mdc-linear-progress-active-indicator-color: #b689d9;
+  --mdc-linear-progress-track-color: #f9f9f9;
   .mdc-linear-progress__bar {
     border-radius: 50px;
     .mdc-linear-progress__bar-inner {
